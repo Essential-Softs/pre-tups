@@ -51,25 +51,25 @@ $(document).ready(function() {
 
 //   Owl Carousel
 
-  $("#ANYcarousel").owlCarousel({      
+  $("#dashboard-top").owlCarousel({      
 	pagination : false,
 	loop:true,
-	 dots:false,
-	 margin:30,
-	 nav:false,
-	 center:true,
+	dots:true,
+	margin:30,
+	nav:false,
+	center:true,
 	autoplay:true,
 	autoplayTimeout:3000,
 	autoplayHoverPause:true,
 	responsive:{
 		0:{
-			items:2
+			items:1
 		},
 		500:{
-			items:3
+			items:1
 		},
 		1000:{
-			items:4
+			items:1
 		}
 	}
   });
