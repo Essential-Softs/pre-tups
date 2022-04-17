@@ -240,6 +240,33 @@ footer p{
 
 
 
+.side-icon{
+  background: transparent!important;
+  padding: 0!important;
+  font-size: 20px!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -506,7 +533,7 @@ body {
 }
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown > a:after {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Pro";
   font-weight: 900;
   content: "\f105";
   font-style: normal;
@@ -534,7 +561,7 @@ body {
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a:before {
   content: "\f111";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 5 Pro";
   font-weight: 400;
   font-style: normal;
   display: inline-block;
