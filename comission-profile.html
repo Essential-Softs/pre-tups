@@ -1,0 +1,763 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="NAME - WebsiteCategory">
+    <meta name="author" content="codeglamor">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PreTUPS - Dashboard</title>
+    <link rel="icon" href="assets/favicon/favicon.ico">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">   
+    <!-- <link rel="stylesheet" href="assets/css/fonts.css">-->
+    <!-- font-family: 'Inter', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/nice-select.css">    
+    <link rel="stylesheet" href="assets/css/venobox.css">    
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    
+    <div class="page-wrapper chiller-theme toggled">
+      <div class="top-bar bg-white d-flex justify-content-between">
+        <h3 class="mt-3"></h3>
+        <div class="d-flex top-corner-user">
+          
+          <div class="d-flex justify-content-end">
+            <a class="mt-4 mr-3 d-none d-md-block d-lg-block" href="">Help</a>
+            <p class="mt-4 mr-3 d-none d-md-block d-lg-block">|</p>
+            <a class="mt-4 mr-2 d-none d-md-block d-lg-block" href="">Network Admin</a>
+            <img class="rounded-circle p-2 mr-3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAANlBMVEXk5ueutLersbTn6eqor7Lp6+y2u77h4+TIzM7N0dLR1NbU19mxt7q/xMbZ3N3c3+C6v8HCx8mJwGV6AAAFVUlEQVR4nO2d2XbjIAxAARmMd/v/f3YgSVs7kzY2CCMc3Zc50yffI7GDIgTDMAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDMAzDMBcEQIt67NqmabtxEqAh9xdhAiBGO8vKoRy3f83S+b9fAYC6MapS8gknauxUviRAa/63+7E0jdC5vzEGEFZWv+k9JOVSF+sIYNWv4Vs5qkWUmau6kzv87o5NgWEEMG/yc03VF5equjvgd3MsLIywHBR0inPujz4ACLOzBa5RfV1KhwN1HyDoHacyFKEO0vNUYxGKdVgAC1I83MdsFOknKkRE0KPq3AZv0CZO0JFb4W/0EhlCF8SZcp5CG9UI71SWsGJMN7pSnHJ7/IqeUQylpDpFRclRj1qIKgKSoMvT3Cqv0QNSjjoMzSCihdDP3nLLvEDPeII0g1gjhtB1NvSCiNkKPTO9IOIKutVwbqEnoME2pDYmIqwpnsmt9MSEHEI3YHS5nTaARTdUA6klBuAnKbE0xVk2baG1iOoSGKqGUJpC/ObFCygN+kmaoZSEYog9oblTEdpYnFBn3d+GhEbEo4eF+1B0Nt0SjPc3w4FMV5OmK6W0DAbU5f0PPR3DNIOFVGQMdZ/GsKLT01zfMI0gG57IB2Tp9Q0vP1qkGvHpnCMC8n73F4RmbWlm3pLOzPv6q6dUK2BK50+X38VIM1woOkn6AbuJaXaECXU0n7Crf/2Tmeufrl3/hPQDTrkT3FSglaTi+rdNhB5wDemsnL7BvvVFLkmRb+7R2dBfgRlEUgunbz7gBi3eFVpKK8M10Fz9JjvexIaqINqLEpLdzB2UFxe0Vr7PIPSntF92+UOaaMXcCm+JfWFJ/xFp3NSmhIfAEKNYgqBTDN/RKEPw9iA/sOJAIYLBVSNkMVUjhD8zPdwY1VxWHR59dHZD+n3zS1ymHqrAQ38Y/B8Xxr1VlCpLdzXxF6CXPY6qGsqt2qbF8q7al1JDcSWiNmjR9L9Lqqq3ZVek84Ce7Muqgkr1y1hufm4AqLvFyEdhyFtpSGmWtr6I3gNnU09d29hbec/a/f9SeiuuKgagQW+5iKo386VnGzvMxvSPe6h9b+Zhse04uaZYrKn/8qmzg3mUnn0xEPoeR/Xz0tyaZe4PPoKXG5uhdwZ7pm3eVM62qwupLQxadNYFbk/l0u3gr/qhmahb6tvoflRuFU1n2QmykhrGQQbbrSxNUxOUdHOzQWGdrrnpagu0pqtaWDS9L0kzkgkkwDjvXeseoZKWxNYUiPZdQetg3No4e0lz/b5gd6Rj3mR1S/jAvd8DVKbL1ensLEiO4ThmcdTNOX43x/n8vRw9ps/PjeNybpcD4viufSRKndkcdXtegv5QnXawAWI+O4B3lGpPCaPucgTwTjWcEMaAivmIKJl64AguKI9G4t9Q0GNmP6+Y8jmUxrp8GIVKV11JZ22CK1SiVVXA2Xwq0lzaAKxS1hikUCQl6BQ7bEVigvjXp9CqreOB+0sY2EWCUcC80K8tmV50Dd5bb0hTMiGeHksR980WIlgl61LV10GgQilxSrKX+QLjHSbZRnjHIASRcAQlxvMTgkP9lujKCyPpHPVEPlXUub//PVXUHBztRWFKomqe6QIEo+p+p6rhhUzE/FQXIRgRRPRaF8kINUxVWhYd1QYqEtj+3UngmEh6yr0l9Icvc3/3fsJmp5CiQlkqgpYYBSVpaJrm/uojBA2JaepZJiLkET+0BSWpDHnFn6pybiICtocJ77C9IqR+XVEhDBkRi+poHMerLNLfoNlyfMzH+m3f0zhqCPbxVrAU6NTgZxiGYRiGYRiGYRiGYT6Uf/VaUTW8zb4SAAAAAElFTkSuQmCC" alt="user">
+          </div>
+        </div>
+      </div>
+        <a id="show-sidebar" class="btn" href="#">
+          <i class="fas fa-bars"></i>
+        </a>
+        <nav id="sidebar" class="sidebar-wrapper">
+          <div class="sidebar-content">
+            <div class="sidebar-brand mb-4">
+              <a href="#">PreTUPS<sup>TM</sup></a>
+              <div id="close-sidebar" class="mr-2">
+                <i class="fas fa-times"></i>
+              </div>
+            </div>
+            <!-- sidebar-search  -->
+            <div class="sidebar-menu">
+              <ul>
+                <!-- <li class="header-menu">
+                  <span>General</span>
+                </li> -->
+                <li>
+                  <a href="#">
+                    <i class="fal fa-home side-icon"></i>
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li class="sidebar-dropdown">
+                  <a href="index.html">
+                    <i class="fal fa-home side-icon"></i>
+                    <span>Profile Management</span>
+                    <!-- <span class="badge badge-pill badge-warning">New</span> -->
+                  </a>
+                  <div class="sidebar-submenu">
+                    <ul>
+                      <li>
+                        <a href="#">Commission Profile
+                          <!-- <span class="badge badge-pill badge-success">Pro</span> -->
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">Transfer Control Profile</a>
+                      </li>
+                      <li>
+                        <a href="#">Bulk Category-wise Default Profile</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- <li class="sidebar-dropdown">
+                  <a href="#">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>E-commerce</span>
+                    <span class="badge badge-pill badge-danger">3</span>
+                  </a>
+                  <div class="sidebar-submenu">
+                    <ul>
+                      <li>
+                        <a href="#">Products
+      
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">Orders</a>
+                      </li>
+                      <li>
+                        <a href="#">Credit cart</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-dropdown">
+                  <a href="#">
+                    <i class="far fa-gem"></i>
+                    <span>Components</span>
+                  </a>
+                  <div class="sidebar-submenu">
+                    <ul>
+                      <li>
+                        <a href="#">General</a>
+                      </li>
+                      <li>
+                        <a href="#">Panels</a>
+                      </li>
+                      <li>
+                        <a href="#">Tables</a>
+                      </li>
+                      <li>
+                        <a href="#">Icons</a>
+                      </li>
+                      <li>
+                        <a href="#">Forms</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-dropdown">
+                  <a href="#">
+                    <i class="fa fa-chart-line"></i>
+                    <span>Charts</span>
+                  </a>
+                  <div class="sidebar-submenu">
+                    <ul>
+                      <li>
+                        <a href="#">Pie chart</a>
+                      </li>
+                      <li>
+                        <a href="#">Line chart</a>
+                      </li>
+                      <li>
+                        <a href="#">Bar chart</a>
+                      </li>
+                      <li>
+                        <a href="#">Histogram</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="sidebar-dropdown">
+                  <a href="#">
+                    <i class="fa fa-globe"></i>
+                    <span>Maps</span>
+                  </a>
+                  <div class="sidebar-submenu">
+                    <ul>
+                      <li>
+                        <a href="#">Google maps</a>
+                      </li>
+                      <li>
+                        <a href="#">Open street map</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="header-menu">
+                  <span>Extra</span>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-book"></i>
+                    <span>Documentation</span>
+                    <span class="badge badge-pill badge-primary">Beta</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-calendar"></i>
+                    <span>Calendar</span>
+                  </a>images
+                  images
+                  images
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="fa fa-folder"></i>
+                    <span>Examples</span>
+                  </a>
+                </li> -->
+              </ul>
+            </div>
+            <!-- sidebar-menu  -->
+          </div>
+          <!-- sidebar-content  -->
+          <div class="sidebar-footer">
+            <a class="btn mb-2" href="#"><i class="far fa-question-circle mr-2"></i>Self Help</a>
+            <p class="light-text mb-3">PreTUPS 715.01.01.01</p>
+          </div>
+        </nav>
+        <!-- sidebar-wrapper  -->
+        <div class="top-nav-bottom">
+          <p class="text-right py-3 px-4 light-text"><span>Network:</span> <b class="text-dark mr-2 ml-1">Bangalore</b> |  <span class="mr-2 ml-2">30/08/2020,</span> 10:13:06 AM</p>
+        </div>
+        <main class="page-content">
+          <div class="container-fluid">
+            <ul class="nav nav-tabs comission-profile-first-toggle mb-5" id="myTab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active mr-1" id="single-operation-tab" data-toggle="tab" href="#single-operation" role="tab" aria-controls="single-operation" aria-selected="true">Single Operation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="bulk-operation-tab" data-toggle="tab" href="#bulk-operation" role="tab" aria-controls="bulk-operation" aria-selected="false">Bulk Operation</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active" id="single-operation" role="tabpanel" aria-labelledby="single-operation-tab">
+                <h4 class="mb-4">Commission Profile</h4>
+                <div class="card mb-4">
+                  <div class="d-flex justify-content-between px-4 py-4">
+                    <h4>
+                      Filters
+                    </h4>
+                    <a class="light-text" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true" aria-controls="collapseExample">
+                      Hide<i class="fal fa-angle-down ml-2"></i>
+                    </a>
+                  </div>
+                  <p>
+                    
+                  </p>
+                  <div class="collapse show" id="collapseExample">
+                    <div class=" card-body">
+                      <form class="comission-profile-filter-form" action="">
+                        <div class="form-row">
+                          <div class="form-group col-lg-2 col-md-4 col-sm-12">
+                            <label for="domain">Dmain</label>
+                            <select class="">
+                              <option selected>All</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-lg-2 col-md-4 col-sm-12">
+                            <label for="categoty">Category</label>
+                            <select class="">
+                              <option selected>All</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-lg-2 col-md-4 col-sm-12">
+                            <label for="geography">Geography</label>
+                            <select class="">
+                              <option selected>All</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-lg-2 col-md-4 col-sm-12">
+                            <label for="grade">Grade</label>
+                            <select class="">
+                              <option selected>All</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-lg-2 col-md-4 col-sm-12">
+                            <label for="status">Status</label>
+                            <select class="">
+                              <option selected>All</option>
+                              <option value="1">One</option>
+                              <option value="2">Two</option>
+                              <option value="3">Three</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-lg-2 col-md-4 col-sm-12">
+                            <label for="date-and-time">Applicable from (Date and Time)</label>
+                            <input type="date" class="form-control" id="date-and-time" placeholder="">
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                          <button type="reset" class="btn btn-reset mr-2">
+                            Reset
+                          </button>
+                          <button type="submit" class="btn btn-light-secondary"> 
+                            Proceed
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="">
+                    <div class="row py-4 mb-3">
+                      <div class="col-lg-6 col-md-6 col-sm-12">
+                        <!-- <div class="form-group has-search">
+                          <span class="fa fa-search form-control-feedback"></span>
+                          <input type="text" class="form-control" placeholder="Search">
+                        </div> -->
+                        <div class="input-group has-search ml-4">
+                          <span class="fal fa-search form-control-feedback"></span>
+                          <input type="text" class="form-control" placeholder="Search by Profile name">
+                          <div class="input-group-append">
+                            <button class="btn btn-light-secondary" type="button">
+                              <!-- <i class="fa fa-search"></i> -->
+                              GO
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="offset-lg-3 col-lg-3 col-md-6 col-sm-12 ">
+                        <a class="btn mr-4 float-right" href=""><i class="fal fa-plus-circle mr-2"></i>ADD COMMISSION PROFILE</a>
+                      </div>
+                    </div>
+                    <table class="table table-responsive-sm table-responsive-md table-responsive-lg commission-profile-table mb-5">
+                      <thead>
+                        <tr>
+                          <th class="border-top-0 border-bottom-0" scope="col">
+                            <form action="">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="all">
+                                <label class="custom-control-label" for="all"></label>
+                              </div>
+                            </form>
+                          </th>
+                          <th class="border-top-0 border-bottom-0" scope="col">Profile set</th>
+                          <th class="border-top-0 border-bottom-0" scope="col">Domain</th>
+                          <th class="border-top-0 border-bottom-0" scope="col">Category</th>
+                          <th class="border-top-0 border-bottom-0" scope="col">Geography</th>
+                          <th class="border-top-0 border-bottom-0" scope="col">Commission Type</th>
+                          <th class="border-top-0 border-bottom-0" scope="col">Version</th>
+                          <th class="border-top-0 border-bottom-0" scope="col">Applicable from</th>
+                          <th class="border-top-0 border-bottom-0" scope="col">Status</th>
+                          <th class="border-top-0 border-bottom-0" scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">
+                            <form action="">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1"></label>
+                              </div>
+                            </form>
+                          </th>
+                          <td>
+                            <a class="text-primary" href="">
+                              ComPro1
+                            </a>
+                          </td>
+                          <td>Distributor</td>
+                          <td>Super distributor</td>
+                          <td>Haryana</td>
+                          <td>Normal</td>
+                          <td>
+                            <select class="table-select">
+                              <option selected>3</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                            </select>
+                          </td>
+                          <td>24-04-2019 <br>
+                            09:10:17 </td>
+                          <td class="text-success">Active</td>
+                          <td>
+                            <div class="action-icons">
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-edit"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-cog"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-ban"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-trash-alt"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <form action="">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="c1">
+                                <label class="custom-control-label" for="c1"></label>
+                              </div>
+                            </form>
+                          </th>
+                          <td>
+                            <a class="text-primary" href="">
+                              ComPro1
+                            </a>
+                          </td>
+                          <td>Distributor</td>
+                          <td>Super distributor</td>
+                          <td>Haryana</td>
+                          <td>Normal</td>
+                          <td>
+                            <select class="table-select">
+                              <option selected>3</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                            </select>
+                          </td>
+                          <td>24-04-2019 <br>
+                            09:10:17 </td>
+                          <td class="text-success">Active</td>
+                          <td>
+                            <div class="action-icons">
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-edit"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-cog"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-ban"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-trash-alt"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <form action="">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="c2">
+                                <label class="custom-control-label" for="c2"></label>
+                              </div>
+                            </form>
+                          </th>
+                          <td>
+                            <a class="text-primary" href="">
+                              ComPro1
+                            </a>
+                          </td>
+                          <td>Distributor</td>
+                          <td>Super distributor</td>
+                          <td>Haryana</td>
+                          <td>Normal</td>
+                          <td>
+                            <select class="table-select">
+                              <option selected>3</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                            </select>
+                          </td>
+                          <td>24-04-2019 <br>
+                            09:10:17 </td>
+                          <td class="text-success">Active</td>
+                          <td>
+                            <div class="action-icons">
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-edit"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-cog"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-ban"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-trash-alt"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <form action="">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="c3">
+                                <label class="custom-control-label" for="c3"></label>
+                              </div>
+                            </form>
+                          </th>
+                          <td>
+                            <a class="text-primary" href="">
+                              ComPro1
+                            </a>
+                          </td>
+                          <td>Distributor</td>
+                          <td>Super distributor</td>
+                          <td>Haryana</td>
+                          <td>Normal</td>
+                          <td>
+                            <select class="table-select">
+                              <option selected>3</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                            </select>
+                          </td>
+                          <td>24-04-2019 <br>
+                            09:10:17 </td>
+                          <td class="text-success">Active</td>
+                          <td>
+                            <div class="action-icons">
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-edit"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-cog"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-ban"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-trash-alt"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <form action="">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="c4">
+                                <label class="custom-control-label" for="c4"></label>
+                              </div>
+                            </form>
+                          </th>
+                          <td>
+                            <a class="text-primary" href="">
+                              ComPro1
+                            </a>
+                          </td>
+                          <td>Distributor</td>
+                          <td>Super distributor</td>
+                          <td>Haryana</td>
+                          <td>Normal</td>
+                          <td>
+                            <select class="table-select">
+                              <option selected>3</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                            </select>
+                          </td>
+                          <td>24-04-2019 <br>
+                            09:10:17 </td>
+                          <td class="text-success">Active</td>
+                          <td>
+                            <div class="action-icons">
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-edit"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-cog"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-ban"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-trash-alt"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <form action="">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="c5">
+                                <label class="custom-control-label" for="c5"></label>
+                              </div>
+                            </form>
+                          </th>
+                          <td>
+                            <a class="text-primary" href="">
+                              ComPro1
+                            </a>
+                          </td>
+                          <td>Distributor</td>
+                          <td>Super distributor</td>
+                          <td>Haryana</td>
+                          <td>Normal</td>
+                          <td>
+                            <select class="table-select">
+                              <option selected>3</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                            </select>
+                          </td>
+                          <td>24-04-2019 <br>
+                            09:10:17 </td>
+                          <td class="text-success">Active</td>
+                          <td>
+                            <div class="action-icons">
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-edit"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-cog"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-ban"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-trash-alt"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">
+                            <form action="">
+                              <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="c6">
+                                <label class="custom-control-label" for="c6"></label>
+                              </div>
+                            </form>
+                          </th>
+                          <td>
+                            <a class="text-primary" href="">
+                              ComPro1
+                            </a>
+                          </td>
+                          <td>Distributor</td>
+                          <td>Super distributor</td>
+                          <td>Haryana</td>
+                          <td>Normal</td>
+                          <td>
+                            <select class="table-select">
+                              <option selected>3</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                            </select>
+                          </td>
+                          <td>24-04-2019 <br>
+                            09:10:17 </td>
+                          <td class="text-success">Active</td>
+                          <td>
+                            <div class="action-icons">
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-edit"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-cog"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-ban"></i>
+                              </a>
+                              <a class="light-text mr-2" href="">
+                                <i class="fal fa-trash-alt"></i>
+                              </a>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="row mb-5">
+                      <div class="col-lg-2 col-md-2 col-sm-12">
+                        <form class="ml-4 mt-1" action="">
+                          <div class="form-groug d-flex">
+                            <label for="inputPassword" class="col-form-label mr-3 rounded-left">Show</label>
+                            <input type="number" class="form-control mr-3" id="entery" placeholder="10" value="10">
+                            <p class="mt-2">Entries</p>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="offset-lg-5 col-lg-5 offset-md-2 col-md-8 col-sm-12 d-flex">
+                        <div class="pagination mr-4">
+                          <a class="color-blue rounded-left" href="">
+                            <i class="fal fa-angle-double-left"></i>
+                          </a>
+                          <a href="">
+                            1
+                          </a>
+                          <a href="">
+                            2
+                          </a>
+                          <a href="">
+                            ...
+                          </a>
+                          <a href="">
+                            25
+                          </a>
+                          <a href="">
+                            78
+                          </a>
+                          <a class="color-blue rounded-right" href="">
+                            <i class="fal fa-angle-double-right"></i>
+                          </a>
+                        </div>
+                        <div class="input-pagination">
+                          <form action="">
+                            <div class="form-groug d-flex">
+                              <label for="inputPassword" class="col-form-label mr-3">Go to page</label>
+                              <input type="text" class="form-control mr-3 w-25" id="entery" placeholder="10" value="10">
+                              <a href="">
+                                Go <i class="fal fa-angle-right"></i>
+                              </a>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+
+
+
+
+
+
+              <div class="tab-pane fade" id="bulk-operation" role="tabpanel" aria-labelledby="bulk-operation-tab">lkndn</div>
+            </div>
+          </div>
+      
+        </main>
+        <!-- page-content" -->
+        <footer>
+          <p class="text-right">
+            2019. Powered by Comviva. All righta reserved.
+          </p>
+        </footer>
+      </div>
+      <!-- page-wrapper -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/owl.carousel.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/venobox.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>

@@ -55,7 +55,7 @@ $(document).ready(function() {
 	pagination : false,
 	loop:true,
 	dots:true,
-	margin:30,
+	margin:10,
 	nav:false,
 	center:true,
 	autoplay:true,
